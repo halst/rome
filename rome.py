@@ -61,7 +61,7 @@ class Roman(int):
                 continue
             pos = Roman(n)._positively()
             neg = Roman(n)._negatively()
-            s += neg if neg and len(neg) < len(pos) else pos
+            s += pos if str(n).startswith("8") else neg if neg and len(neg) < len(pos) else pos
         return s
 
     def __repr__(self):
